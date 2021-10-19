@@ -24,10 +24,10 @@ namespace TarinYourProgrammerWFA {
         lbl_err_msg.Text = "Bitte positive ganze Zahl eingeben!";
       }
 
-      lbl_output.Text = CalculateNewNumberSeries(inp_zahl.Text);
+      lbl_output.Text = CalculateMultipleNumberSeries(inp_zahl.Text, 15);
     }
 
-    private string CalculateNewNumberSeries(string inputDigit) {
+    private string CalculateSingleNumberSeries(string inputDigit) {
       string result = "";
       char lastDigit;
       int sameDigitCount = 1;
@@ -45,6 +45,19 @@ namespace TarinYourProgrammerWFA {
       result += $"{sameDigitCount}{lastDigit}";
 
       return result;
+    }
+
+    private string CalculateMultipleNumberSeries(string input, int repetitions) {
+      string singleResult, singleInput, completeResult = "";
+
+      singleInput = input;
+      for(int i = 0; i < repetitions; i++) {
+        singleResult = CalculateSingleNumberSeries(singleInput);
+        completeResult += singleResult+"\n";
+        singleInput = singleResult;
+      }
+
+      return completeResult;
     }
   }
 }
