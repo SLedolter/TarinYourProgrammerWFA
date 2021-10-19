@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace TarinYourProgrammerWFA {
@@ -57,6 +58,38 @@ namespace TarinYourProgrammerWFA {
         if(i < userNumbers.Count - 1) {
           lbl_chosen_numbers.Text += "/";
         }
+      }
+    }
+
+    private void label3_Click(object sender, EventArgs e) {
+
+    }
+
+    private void btn_start_Click(object sender, EventArgs e) {
+      List<int> randomNumbers = new List<int>();
+      Random random = new Random();
+      bool strike = false;
+      double counter = 0;
+      int newNumber;
+
+      while(!strike) {
+        while(randomNumbers.Count < 6) {
+          newNumber = random.Next(1, 46);
+          if(!randomNumbers.Contains(newNumber)) {
+            randomNumbers.Add(newNumber);
+          }
+        }
+        randomNumbers.Sort();
+
+        lbl_count_tries.Text = $"Azahl der Versuche: {counter}";
+        counter++;
+        if(counter % 100 == 0) {
+          lbl_count_tries.Refresh();
+        }
+        if(randomNumbers.SequenceEqual(userNumbers)) {
+          strike = true;
+        }
+        randomNumbers.Clear();
       }
     }
   }

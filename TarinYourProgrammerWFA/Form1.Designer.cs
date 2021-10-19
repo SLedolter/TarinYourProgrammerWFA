@@ -28,6 +28,8 @@ namespace TarinYourProgrammerWFA {
       this.bnt_choose_numbers = new System.Windows.Forms.Button();
       this.label2 = new System.Windows.Forms.Label();
       this.lbl_chosen_numbers = new System.Windows.Forms.Label();
+      this.btn_start = new System.Windows.Forms.Button();
+      this.lbl_count_tries = new System.Windows.Forms.Label();
       this.SuspendLayout();
       // 
       // label1
@@ -66,11 +68,32 @@ namespace TarinYourProgrammerWFA {
       this.lbl_chosen_numbers.Size = new System.Drawing.Size(0, 13);
       this.lbl_chosen_numbers.TabIndex = 3;
       // 
+      // btn_start
+      // 
+      this.btn_start.Location = new System.Drawing.Point(13, 120);
+      this.btn_start.Name = "btn_start";
+      this.btn_start.Size = new System.Drawing.Size(75, 23);
+      this.btn_start.TabIndex = 4;
+      this.btn_start.Text = "Start";
+      this.btn_start.UseVisualStyleBackColor = true;
+      this.btn_start.Click += new System.EventHandler(this.btn_start_Click);
+      // 
+      // lbl_count_tries
+      // 
+      this.lbl_count_tries.AutoSize = true;
+      this.lbl_count_tries.Location = new System.Drawing.Point(10, 146);
+      this.lbl_count_tries.Name = "lbl_count_tries";
+      this.lbl_count_tries.Size = new System.Drawing.Size(0, 13);
+      this.lbl_count_tries.TabIndex = 5;
+      this.lbl_count_tries.Click += new System.EventHandler(this.label3_Click);
+      // 
       // Form1
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(800, 450);
+      this.Controls.Add(this.lbl_count_tries);
+      this.Controls.Add(this.btn_start);
       this.Controls.Add(this.lbl_chosen_numbers);
       this.Controls.Add(this.label2);
       this.Controls.Add(this.bnt_choose_numbers);
@@ -89,6 +112,8 @@ namespace TarinYourProgrammerWFA {
     private System.Windows.Forms.Button bnt_choose_numbers;
     private System.Windows.Forms.Label label2;
     private System.Windows.Forms.Label lbl_chosen_numbers;
+    private System.Windows.Forms.Button btn_start;
+    private System.Windows.Forms.Label lbl_count_tries;
   }
 }
 
