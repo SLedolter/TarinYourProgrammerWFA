@@ -23,8 +23,8 @@ namespace TarinYourProgrammerWFA {
     protected override void OnLoad(EventArgs e) {
       base.OnLoad(e);
       source_array = FillArray(50);
-      SortIntegerArray();
       OutputIntArrayToLabel("lbl_array_in");
+      SortIntegerArray();
     }
 
     private void Btn_min_max_Click(object sender, EventArgs e) {
@@ -85,8 +85,8 @@ namespace TarinYourProgrammerWFA {
 
     private void Btn_refill_Click(object sender, EventArgs e) {
       source_array = FillArray(50);
-      SortIntegerArray();
       OutputIntArrayToLabel("lbl_array_in");
+      SortIntegerArray();
     }
   }
 }
