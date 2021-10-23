@@ -78,7 +78,7 @@ namespace TarinYourProgrammerWFA {
       this.btn_min_max.TabIndex = 3;
       this.btn_min_max.Text = "MinMax Calc";
       this.btn_min_max.UseVisualStyleBackColor = true;
-      this.btn_min_max.Click += new System.EventHandler(this.btn_min_max_Click);
+      this.btn_min_max.Click += new System.EventHandler(this.Btn_min_max_Click);
       // 
       // label1
       // 
@@ -105,7 +105,7 @@ namespace TarinYourProgrammerWFA {
       this.btn_refill.TabIndex = 6;
       this.btn_refill.Text = "Refill Array";
       this.btn_refill.UseVisualStyleBackColor = true;
-      this.btn_refill.Click += new System.EventHandler(this.btn_refill_Click);
+      this.btn_refill.Click += new System.EventHandler(this.Btn_refill_Click);
       // 
       // label2
       // 
