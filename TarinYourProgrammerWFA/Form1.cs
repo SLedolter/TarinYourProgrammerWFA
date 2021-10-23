@@ -59,6 +59,27 @@ namespace TarinYourProgrammerWFA {
       return result_array;
     }
 
+    private void SortIntegerArrayDean() {
+      int jumpindex;
+      int count = 0;
+      for(int i = 0; i < source_array.GetLength(0) - 1; i++) {
+        jumpindex = i;
+        while(source_array[i] > source_array[i + 1]) {
+          int _ = source_array[i];
+          source_array[i] = source_array[i + 1];
+          source_array[i + 1] = _;
+          count++;
+          if(i == 0) {
+            break;
+          } else {
+            i--;
+          }
+        }
+        i = jumpindex;
+      }
+      lbl_count.Text = count.ToString();
+    }
+
     private void OutputIntArrayToLabel(int[] array_in, string label_name) {
       Label output_label = (Label)this.Controls.Find(label_name, true)[0];
       string output_text = "[";
