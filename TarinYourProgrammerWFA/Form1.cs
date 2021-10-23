@@ -65,9 +65,9 @@ namespace TarinYourProgrammerWFA {
       for(int i = 0; i < source_array.GetLength(0) - 1; i++) {
         jumpindex = i;
         while(source_array[i] > source_array[i + 1]) {
-          int _ = source_array[i];
+          int tempNumber = source_array[i];
           source_array[i] = source_array[i + 1];
-          source_array[i + 1] = _;
+          source_array[i + 1] = tempNumber;
           count++;
           if(i == 0) {
             break;
