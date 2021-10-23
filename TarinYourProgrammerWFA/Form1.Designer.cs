@@ -128,7 +128,7 @@ namespace TarinYourProgrammerWFA {
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(800, 450);
+      this.ClientSize = new System.Drawing.Size(1150, 450);
       this.Controls.Add(this.lbl_min_max);
       this.Controls.Add(this.label2);
       this.Controls.Add(this.btn_refill);
@@ -140,7 +140,7 @@ namespace TarinYourProgrammerWFA {
       this.Controls.Add(this.lbl_array_out_label);
       this.Controls.Add(this.lbl_array_in_label);
       this.Name = "Form1";
-      this.Text = "Form1";
+      this.Text = "Sort Array";
       this.Load += new System.EventHandler(this.Form1_Load);
       this.ResumeLayout(false);
       this.PerformLayout();
